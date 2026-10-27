@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<h1>Welcome {{ request.user.username }} 👋</h1>
+
+<hr>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card p-3">
+            📄 Upload PDF
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3">
+            🤖 AI Chat
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3">
+            📜 Chat History
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3">
+            🚪 Logout
+        </div>
+    </div>
+
+</div>
+<a href="{% url 'upload' %}" class="btn btn-primary">
+    Upload PDF
+</a>
+{% endblock %}
